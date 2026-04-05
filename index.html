@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VA Foreclosure Crisis — Shareable Action Kit v2</title>
+<meta property="og:title" content="VA Foreclosure Crisis — Action Kit">
+<meta property="og:description" content="Facts, scripts, call-to-actions, and resources. 160,000+ veteran families impacted. Bipartisan crisis, bipartisan fix — but the VA won't act.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#1F2937;background:#FFF;line-height:1.6}
+
+.header{background:#0F172A;color:#FFF;padding:2rem 1.5rem;text-align:center}
+.header h1{font-family:'Source Serif 4',Georgia,serif;font-size:1.75rem;font-weight:700;margin-bottom:.5rem;line-height:1.2}
+.header .subtitle{font-size:.95rem;color:#94A3B8;max-width:640px;margin:0 auto}
+.header .badge{display:inline-block;background:#B07A5B;color:#FFF;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:.25rem .75rem;border-radius:2px;margin-bottom:.75rem}
+.header .version{font-size:.7rem;color:#64748B;margin-top:.5rem}
+
+.nav{background:#1E293B;padding:.75rem 1.5rem;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.nav a{color:#94A3B8;text-decoration:none;font-size:.75rem;font-weight:500;padding:.25rem .5rem;border-bottom:2px solid transparent;transition:all .15s}
+.nav a:hover,.nav a:focus{color:#FFF;border-bottom-color:#B07A5B}
+
+.main{max-width:960px;margin:0 auto;padding:0 2.5rem 1.5rem}
+.section{padding:1.25rem 0;border-bottom:1px solid #E5E7EB}
+.section:last-child{border-bottom:none}
+.section-label{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#4E6E81;margin-bottom:.25rem}
+.section h2{font-family:'Source Serif 4',Georgia,serif;font-size:1.15rem;font-weight:700;color:#0F172A;margin-bottom:.5rem;line-height:1.3}
+.section h3{font-size:.88rem;font-weight:700;color:#0F172A;margin:.75rem 0 .35rem}
+
+p{font-size:.84rem;margin-bottom:.5rem;line-height:1.55}
+.muted{color:#6B7280;font-size:.8rem}
+
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:.75rem 0}
+.stat-card{background:#F4F7F8;border-left:3px solid #4E6E81;padding:.6rem .5rem;text-align:center}
+.stat-card .number{font-family:'Source Serif 4',Georgia,serif;font-size:1.2rem;font-weight:700;color:#0F172A;line-height:1.1}
+.stat-card .label{font-size:.65rem;color:#6B7280;margin-top:.15rem;line-height:1.25}
+.stat-card.accent{border-left-color:#B07A5B;background:#FBF7F4}
+
+.anchor-quote{border-left:4px solid #B07A5B;padding:.75rem 1rem;margin:.75rem 0;background:#FBF7F4}
+.anchor-quote p{font-family:'Source Serif 4',Georgia,serif;font-size:.95rem;font-style:italic;color:#1F2937;line-height:1.45;margin-bottom:0}
+.anchor-quote .attribution{font-family:'Inter',sans-serif;font-size:.72rem;font-style:normal;color:#6B7280;margin-top:.35rem}
+
+.copy-block{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:4px;padding:.85rem;margin:.6rem 0;position:relative}
+.copy-block .copy-label{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4E6E81;margin-bottom:.35rem}
+.copy-block p,.copy-block li{font-size:.82rem;line-height:1.5}
+.copy-block ul{list-style:none;padding:0}
+.copy-block ul li{padding:.2rem 0 .2rem 1.1rem;position:relative}
+.copy-block ul li::before{content:"—";position:absolute;left:0;color:#4E6E81;font-weight:700}
+.copy-btn{position:absolute;top:.75rem;right:.75rem;background:#4E6E81;color:#FFF;border:none;padding:.3rem .7rem;font-size:.68rem;font-weight:600;cursor:pointer;border-radius:2px;transition:background .15s}
+.copy-btn:hover{background:#3E5968}
+.copy-btn.copied{background:#059669}
+
+.script-block{background:#0F172A;color:#E2E8F0;border-radius:4px;padding:1rem;margin:.6rem 0;position:relative}
+.script-block .copy-label{color:#94A3B8;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem}
+.script-block p{font-size:.82rem;line-height:1.55;margin-bottom:.5rem;color:#CBD5E1}
+.script-block p:last-of-type{margin-bottom:0}
+.script-block .emphasis{color:#FFF;font-weight:600}
+.script-block .copy-btn{background:#4E6E81}
+
+.call-box{background:#FBF7F4;border:2px solid #B07A5B;border-radius:4px;padding:1rem;margin:.6rem 0}
+.call-box .phone-number{font-family:'Source Serif 4',Georgia,serif;font-size:1.3rem;font-weight:700;color:#0F172A;text-align:center;margin:.4rem 0}
+.call-box .phone-label{font-size:.7rem;color:#6B7280;text-align:center}
+
+.timeline-item{display:flex;gap:.75rem;padding:.4rem 0;border-bottom:1px solid #F3F4F6}
+.timeline-item:last-child{border-bottom:none}
+.timeline-date{font-size:.7rem;font-weight:700;color:#4E6E81;min-width:85px;flex-shrink:0}
+.timeline-content{font-size:.78rem;line-height:1.45}
+.timeline-content .admin-tag{display:inline-block;font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:.05rem .3rem;border-radius:2px;margin-left:.2rem}
+.tag-biden{background:#DBEAFE;color:#1E40AF}
+.tag-trump{background:#FEE2E2;color:#991B1B}
+.tag-congress{background:#D1FAE5;color:#065F46}
+.tag-va{background:#F3F4F6;color:#374151}
+
+.org-row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:.5rem 0}
+.org-card{background:#F9FAFB;border:1px solid #E5E7EB;padding:.6rem .75rem;border-radius:3px}
+.org-card .org-name{font-weight:700;font-size:.78rem;color:#0F172A;line-height:1.3}
+.org-card .org-type{font-size:.55rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#4E6E81;margin-bottom:.15rem}
+.org-card .org-quote{font-size:.75rem;font-style:italic;color:#374151;margin:.25rem 0;line-height:1.4}
+.org-card .org-source{font-size:.65rem;color:#6B7280}
+.org-card.full-width{grid-column:1/-1}
+
+.link-row{display:grid;grid-template-columns:1fr 1fr;gap:.35rem;margin:.6rem 0}
+.link-item{display:block;padding:.5rem .75rem;background:#F4F7F8;border-left:3px solid #4E6E81;text-decoration:none;color:#1F2937;transition:background .15s}
+.link-item:hover{background:#E8EDF1}
+.link-item .link-label{font-size:.6rem;font-weight:600;color:#4E6E81;text-transform:uppercase;letter-spacing:.05em}
+.link-item .link-title{font-size:.78rem;font-weight:500}
+
+.reframe-box{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:4px;padding:.85rem;margin:.6rem 0}
+.reframe-box .reframe-label{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#065F46;margin-bottom:.35rem}
+
+.counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:.6rem 0}
+.counter-card{padding:.65rem;border-radius:3px}
+.counter-card .counter-claim{font-size:.75rem;font-weight:600;color:#991B1B;margin-bottom:.3rem;line-height:1.35}
+.counter-card .counter-response{font-size:.75rem;color:#1F2937;line-height:1.4}
+.counter-card{background:#FEF2F2;border:1px solid #FECACA}
+.counter-card .counter-response{background:#F0FDF4;border:1px solid #BBF7D0;padding:.5rem;border-radius:3px;margin-top:.3rem}
+
+.footer{background:#0F172A;color:#94A3B8;padding:1rem;text-align:center;font-size:.68rem;line-height:1.5}
+.footer a{color:#9DCFC8}
+
+@media(min-width:1024px){
+  .main{max-width:1080px;padding:0 3rem 2rem}
+  .reframe-box{max-width:1080px!important}
+  p{font-size:.92rem}
+  .section h2{font-size:1.3rem}
+  .counter-grid{grid-template-columns:1fr 1fr}
+  .org-row{grid-template-columns:1fr 1fr}
+  .link-row{grid-template-columns:1fr 1fr 1fr}
+}
+@media(max-width:640px){
+  .stat-row{grid-template-columns:1fr}
+  .counter-grid{grid-template-columns:1fr}
+  .org-row{grid-template-columns:1fr}
+  .link-row{grid-template-columns:1fr}
+  .header h1{font-size:1.35rem}
+  .nav{flex-direction:column;align-items:center}
+  .main{padding:0 1rem 1rem}
+}
+@media print{
+  .copy-btn,.nav{display:none}
+  .header{background:#FFF;color:#000;border-bottom:2px solid #000}
+  .header .badge{border:1px solid #000;background:#FFF;color:#000}
+  .script-block{background:#F3F4F6;color:#000;border:1px solid #999}
+  .script-block .emphasis,.script-block p{color:#000}
+  body{font-size:10pt}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">Action Kit v2 — Share Freely</div>
+  <h1>The VA Mortgage Foreclosure Crisis</h1>
+  <p class="subtitle">Facts, scripts, call-to-actions, and context for anyone sharing this story. This is a bipartisan crisis with bipartisan support to fix — the VA just needs to act.</p>
+  <div class="version">Updated April 5, 2026 | Sources cited throughout</div>
+</div>
+
+<div class="main">
+<div class="reframe-box" style="margin:1.5rem auto;max-width:960px;border:2px solid #B07A5B">
+  <div class="reframe-label">Before you share — please read this</div>
+  <p style="font-size:.88rem">This is about ALL 160,000+ veteran families, not just one. My family's story got attention because we happened to still be in our home when NPR published — but there are 10,000+ families who already lost their homes and are still displaced with no remedy, and 90,000+ being foreclosed on right now just like us.</p>
+  <p style="font-size:.88rem"><strong>Everyone else got pandemic help. Veterans and their families did not.</strong> Businesses got PPP loans. Homeowners with FHA and conventional loans got permanent partial claims and the Homeowner Assistance Fund. Veterans got a temporary program that was cancelled without notice — twice — and were disqualified from HAF because VA disability compensation was counted as income. The majority of these families are not asking for free money. They have stable income. They have disability compensation. They couldn't pay because the systems designed to help them kept getting cancelled, delayed, or never implemented. They followed the rules, did what they were told, waited when they were told to wait — and got shafted every time.</p>
+  <p style="font-size:.88rem">When you share a family's story, connect it to the systemic crisis. Don't speculate about individual families' finances. The issue is institutional — the VA cancelled the safety net twice, Congress passed a permanent fix, and the VA still won't implement it. Stick to facts. The evidence speaks for itself.</p>
+</div>
+</div>
+
+<div class="nav">
+  <a href="#whats-happening">What's Happening</a>
+  <a href="#timeline">How We Got Here</a>
+  <a href="#attorney">Attorney Gap</a>
+  <a href="#misinfo">Common Misinfo</a>
+  <a href="#who-says">Who Says So</a>
+  <a href="#video">Video Scripts</a>
+  <a href="#call">Call Your Rep</a>
+  <a href="#captions">Social Captions</a>
+  <a href="#links">Links</a>
+  <a href="#community">Community</a>
+</div>
+
+<div class="main">
+
+<!-- SECTION 1: WHAT'S HAPPENING -->
+<div class="section" id="whats-happening">
+  <div class="section-label">Section 1</div>
+  <h2>What's Happening — The Short Version</h2>
+
+  <p>This didn't start with VASP. During COVID, the government told veterans to use forbearance — pause their mortgage payments. The VA had a partial claim program (COVID-VAPCP) that would let veterans defer missed payments as a zero-interest lien and resume paying at their original rate. Families were in <strong>active forbearance</strong> when this happened — no communication, no updates. Many found out the way we did: we called in December 2022 to restart our payments by February 1st, 2023, and were told the program was gone.</p>
+
+  <p>The options we were given: pay everything back immediately in a lump sum, or accept a loan modification that would change our contract — lose our 2.25% interest rate and see our payments increase over $1,000/month due to post-pandemic rate spikes. <strong>We were not allowed to just resume our payments.</strong> We were told this would be fixed. We waited.</p>
+
+  <p>And we couldn't even get help from the same place everyone else did. The Homeowner Assistance Fund (HAF) — the federal program created to help families who fell behind during COVID — disqualified us because of income eligibility limits. <strong>They counted VA disability compensation as income,</strong> even though we needed help because of the past, not the present. We had done exactly what we were told: pause payments temporarily, get back on our feet. I was working full-time. But the disability income that exists because my husband was injured serving pushed us over the limit. Every other pandemic relief program — PPP loans for businesses, HAF for homeowners with FHA and conventional loans — had better transitions and more options. Veterans got nothing.</p>
+
+  <p>Here's what makes this worse: <strong>every other federal mortgage program kept their safety net.</strong> FHA has a permanent partial claim. Fannie Mae and Freddie Mac have payment deferrals. Only the VA let its program expire and left veterans with nothing. If you have an FHA loan and fall behind, the government helps you catch up at your original rate. If you have a VA loan — supposedly the benefit you earned by serving — you get a loan modification at current market rates, often 3x–4x your original. That's the gap.</p>
+
+  <p>VASP was built to fix that gap. It bought the loan from the servicer and modified it to 2.5% fixed. We were told this would fix everything. We got our paperwork in, we called and emailed and checked in, we waited through lengthy processing delays. VASP wasn't even fully operational until October 2024 — servicers had implementation delays for months. <strong>Then in May 2025, the VA killed VASP without a replacement ready.</strong> That was the <strong>second time</strong> veteran families had the rug pulled out from under them without notice.</p>
+
+  <p>We were told this would be fixed. Again. Second time now. Congress stepped in because two administrations had now done this to veterans. They passed H.R. 1815 (the VA Home Loan Program Reform Act) with <strong>unanimous bipartisan support</strong> — every Republican and every Democrat — signed into law July 30, 2025. It gives the VA permanent partial claim authority that <strong>can't be cancelled at the whim of any administration.</strong> But the VA still hasn't implemented it. New ETA: <strong>June 2026 — a full year after the law was signed.</strong></p>
+
+  <p>This time, instead of cancelling a program, the VA has simply stalled — not implementing the law Congress passed, not complying with its own authority to prevent foreclosures, and not pausing evictions it has the legal power to stop. We waited this time without a moratorium or foreclosure pause. Veterans are losing their homes with no path to keep paying. The VA has the legal authority to pause all foreclosures and evictions right now under existing statute. They won't use it.</p>
+
+  <div class="stat-row">
+    <div class="stat-card accent">
+      <div class="number">10,000+</div>
+      <div class="label">Veteran families already lost homes since May 2025 — many still homeless, no active remedy</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">90,000+</div>
+      <div class="label">Currently delinquent and in the foreclosure process right now</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">160,000+</div>
+      <div class="label">Total veteran families impacted and climbing</div>
+    </div>
+  </div>
+
+  <div class="anchor-quote">
+    <p>"We were not asking for a handout. We are asking to pay our mortgage. We were not allowed to."</p>
+    <div class="attribution">— Leann Ledford, MSW, caregiver to a disabled Marine veteran (two deployments to Afghanistan), Spokane WA</div>
+  </div>
+</div>
+
+<!-- SECTION 2: BIPARTISAN TIMELINE -->
+<div class="section" id="timeline">
+  <div class="section-label">Section 2</div>
+  <h2>How We Got Here — Both Administrations, Both Parties</h2>
+
+  <div class="reframe-box" style="margin-bottom:1.25rem">
+    <div class="reframe-label">The bipartisan bottom line</div>
+    <p style="font-size:.88rem"><strong>Biden's VA</strong> cancelled the first partial claim program (COVID-VAPCP) without notice while families were in active forbearance, then created VASP late. <strong>Trump's VA</strong> killed VASP without a replacement — the second time veteran families had the rug pulled — then failed to implement the law Congress passed to fix it. <strong>Congress</strong> did its job — unanimous vote, permanent law that can't be cancelled by any administration. <strong>The VA</strong> is the bottleneck. Instead of cancelling a program this time, they're simply not implementing the law and not stopping foreclosures they have the authority to stop. Government shutdowns, VA workforce cuts, and holiday recesses made it worse. This isn't left vs. right. This is 160,000+ families caught in a systemic failure that both administrations contributed to, that Congress fixed, and that the VA still won't act on.</p>
+  </div>
+
+  <p class="muted">This is not a "Biden program" or a "Trump decision." Here's the actual timeline:</p>
+
+  <div style="margin:1.25rem 0">
+    <div class="timeline-item">
+      <div class="timeline-date">Mar 2020</div>
+      <div class="timeline-content">CARES Act passes (bipartisan). Veterans get COVID forbearance — can pause mortgage payments. <span class="admin-tag tag-congress">Congress</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Jul 2021</div>
+      <div class="timeline-content">VA launches COVID-VAPCP (partial claim program). Veterans can defer missed payments as a zero-interest second lien. <span class="admin-tag tag-biden">Biden VA</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Oct 2022</div>
+      <div class="timeline-content"><strong>VA cancels partial claim program (COVID-VAPCP) without notice.</strong> Families were in active forbearance with no communication. Many found out only when they called to restart payments. First time families had the rug pulled. FHA and Fannie Mae kept their partial claim programs — VA is now the only federal mortgage system with no affordable catch-up option. <span class="admin-tag tag-va">VA structural gap</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">2022–2024</div>
+      <div class="timeline-content">Interest rates spike from ~2.5% to ~7%. Veterans offered loan modifications at current market rates — often 3x–4x their original rate. Many can't afford the new payments. <strong>This is the core problem.</strong> <span class="admin-tag tag-va">Market + VA policy gap</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Dec 2023</div>
+      <div class="timeline-content">VA issues Circular 26-23-25 — "strongly encouraged" (not required) servicers to pause foreclosures through May 2024. It was voluntary. MBA acknowledged receipt but compliance was uneven. (<a href="https://www.benefits.va.gov/HOMELOANS/documents/circulars/26-23-25.pdf" target="_blank">full circular</a> | <a href="https://www.mba.org/news-and-research/newsroom/news/2023/11/30/mba-statement-on-the-veterans-affairs-voluntary-foreclosure-moratorium" target="_blank">MBA statement</a>) <span class="admin-tag tag-biden">Biden VA</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">May 2024</div>
+      <div class="timeline-content">VA announces VASP — buys the loan from the servicer, modifies it to 2.5% fixed rate. But servicers have implementation delays; <strong>VASP isn't fully operational until October 2024.</strong> Families wait months with inconsistent updates. Eventually 17,000+ enrolled. <span class="admin-tag tag-biden">Biden VA</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Mar–Apr 2025</div>
+      <div class="timeline-content">VA announces VASP will end May 1. NCLC, MBA, consumer protection orgs, and HVAC members warn that cancelling VASP without a replacement will result in mass foreclosures. Multiple organizations testify this will be "a complex nightmare" that needs a proper transition. <strong>Warnings are ignored.</strong> <span class="admin-tag tag-congress">Congress + Advocates</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">May 1, 2025</div>
+      <div class="timeline-content"><strong>VA kills VASP.</strong> Circular 26-25-2. No more applications accepted. No replacement ready. <strong>Second time</strong> the VA cancelled a mortgage rescue program out from under veteran families without notice or transition. <span class="admin-tag tag-trump">Trump VA</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">May 2025</div>
+      <div class="timeline-content">Bipartisan advocates + HVAC members call on VA to revive VASP or issue a foreclosure moratorium. VA declines both. Maj. Gen. James Marks (ret.) warns in Military Times: ending VASP without replacement is "reckless." <span class="admin-tag tag-congress">Congress + Advocates</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Jul 30, 2025</div>
+      <div class="timeline-content"><strong>H.R. 1815 signed into law.</strong> Unanimous bipartisan vote. Gives VA permanent partial claim authority — written as law specifically so no future administration can cancel it at will. Two administrations had now failed veterans; Congress made it permanent. Sponsors: Bost (R-IL) + Takano (D-CA), Moran (R-KS) + Blumenthal (D-CT). <span class="admin-tag tag-congress">Congress (bipartisan)</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Aug 2025 – present</div>
+      <div class="timeline-content"><strong>VA does not implement H.R. 1815.</strong> Instead of cancelling a program this time, the VA simply stalls. Compounding factors: a 43-day government shutdown (Oct–Nov 2025) delays all federal operations, VA sheds ~30,000 positions through attrition and hiring freezes, Congressional holiday recesses (Thanksgiving through New Year's), and a 3-month federal layoff moratorium that expired Feb 2026. Throughout all of this — no partial claim program, no foreclosure pause, no eviction moratorium. <span class="admin-tag tag-trump">Trump VA (inaction) + govt disruption</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Mar 26, 2026</div>
+      <div class="timeline-content">HVAC "Kitchen Table Issues" hearing. NCLC, MBA, and others testify. VA says new ETA for partial claim program: <strong>June 2026.</strong> Over a year after VASP killed, 13 months after the law was passed. HVAC Chairman Bost and Economic Opportunity Chairman Van Orden — both Republicans who co-sponsored H.R. 1815 — have stated the program must "ensure that veterans in financial hardship have access to the tools they need to stay in their homes." <strong>Whether Congress will demand a foreclosure pause until the program is operational is the key outstanding question.</strong> <span class="admin-tag tag-va">VA / HVAC</span></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 2, 2026</div>
+      <div class="timeline-content">Chris Arnold and Quil Lawrence publish their investigation — they've been reporting on the VA mortgage crisis for years. 10,000+ homes lost confirmed (ICE Mortgage Technology data). Syndicated to 40+ NPR affiliates, est. 25M+ reach. <span class="admin-tag tag-va">Arnold + Lawrence / NPR</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- SECTION 3: ATTORNEY GAP -->
+<div class="section" id="attorney">
+  <div class="section-label">Section 3</div>
+  <h2>The Attorney Gap — Why Legal Action Matters</h2>
+
+  <p>Right now, the biggest concrete gap is <strong>legal representation</strong>. Veteran families facing wrongful foreclosure need attorneys who specialize in RESPA/mortgage servicing litigation to:</p>
+
+  <div class="copy-block">
+    <ul>
+      <li><strong>File for injunctive relief</strong> — a court order forcing the VA to pause foreclosures/evictions until H.R. 1815 is implemented, or until the VA complies with its own internal circulars and statutory authority</li>
+      <li><strong>Bring class action</strong> — represent the 10,000+ families who already lost homes and the 90,000+ currently in process, not just individual cases</li>
+      <li><strong>Enforce existing law</strong> — H.R. 1815 is signed law. 38 U.S.C. § 3732 and § 3733 give the VA authority over properties it owns. If the VA won't act voluntarily, a judge can compel it</li>
+    </ul>
+  </div>
+
+  <p>The Ledford family's local legal aid (Northwest Justice Project) was unable to take the case due to scope and capacity. This is the pattern — legal aid is overwhelmed, and private mortgage litigation attorneys are hard to find, especially in rural areas. <strong>If you are an attorney or know one who handles RESPA/VA mortgage cases, please reach out.</strong></p>
+
+  <p style="font-size:.85rem;color:#6B7280">Contact: jlledford.family@gmail.com | The case has eight identified regulatory violations, active congressional oversight, VA OIG investigation (Ref #2026-16691), and NPR coverage.</p>
+</div>
+
+<!-- SECTION 4: COMMON MISINFO / COUNTERARGUMENTS -->
+<div class="section" id="misinfo">
+  <div class="section-label">Section 4</div>
+  <h2>Responding to Common Pushback</h2>
+
+  <p class="muted">You'll see these arguments on social media. Here's the fact-based response for each.</p>
+
+  <div class="counter-grid">
+    <div class="counter-card">
+      <div class="counter-claim">"VASP was just a temporary COVID handout. It was always going to end."</div>
+      <div class="counter-response">VASP wasn't the start — it was the second attempt. The VA first had a COVID partial claim program (COVID-VAPCP), cancelled that without notice in 2022, then built VASP as the replacement, then cancelled that without notice in 2025. That's twice the VA pulled the safety net out from under veteran families. Meanwhile, FHA, Fannie Mae, and Freddie Mac all kept their partial claim programs. The VA is the only federal mortgage system that doesn't have one. Congress passed the permanent fix (H.R. 1815) specifically because two administrations had cancelled programs at will. The VA still hasn't implemented it. You don't pull the net twice and call it "temporary."</div>
+    </div>
+    <div class="counter-card">
+      <div class="counter-claim">"Veterans need to pay their mortgages and stop looking for handouts."</div>
+      <div class="counter-response">These families ARE trying to pay. They used forbearance (which the government told them to use), came out of it, and were told they couldn't just resume payments — they had to pay everything back immediately or accept a modification at 3x–4x their original rate. The partial claim lets them resume at their original rate with missed payments deferred. It's not forgiveness — it costs the VA $0 upfront (repaid when the home sells or refinances). Homeowners with FHA/conventional loans got permanent partial claims and HAF assistance. Veterans couldn't even access HAF because VA disability compensation was counted as income. The people who served got the worst deal of anyone. <em>[If the conversation involves fraud/fiscal responsibility talking points, add: "Businesses got PPP loans — many forgiven, many fraudulently. Veterans are asking to resume paying their own mortgages at the rate they earned. That's the comparison."]</em></div>
+    </div>
+    <div class="counter-card">
+      <div class="counter-claim">"VASP was a bad program. Even Republicans said so."</div>
+      <div class="counter-response">Yes, VASP had implementation problems — long processing times, servicer confusion, cases falling through cracks. Nobody is saying it was perfect. But "the program had problems" and "we should let 160,000 families lose their homes while we build a better one" are not the same argument. You can fix bureaucratic inefficiency AND keep families housed. Congress agreed — that's why H.R. 1815 passed unanimously. The question is why the VA hasn't implemented it.</div>
+    </div>
+    <div class="counter-card">
+      <div class="counter-claim">"This started under Biden so it's Biden's fault."</div>
+      <div class="counter-response">The structural gap (no permanent partial claim authority) predates both administrations. Biden's VA created VASP late — should've happened years earlier. Trump's VA ended it without a replacement. Congress fixed the law bipartisanly. The current VA won't implement the fix. Blaming one party lets the other off the hook. Both are accountable. The VA is the bottleneck right now.</div>
+    </div>
+    <div class="counter-card">
+      <div class="counter-claim">"VA mortgages are being gutted / the whole program is gone."</div>
+      <div class="counter-response">Not accurate. The VA Home Loan Guaranty program still exists and is still issuing new loans. What's gone is the safety net for veterans who fall behind. The loss mitigation waterfall — the set of options to help veterans catch up on missed payments and avoid foreclosure — has a massive gap in it because the partial claim program isn't operational. New loans are fine. Veterans already in trouble have nowhere to go.</div>
+    </div>
+    <div class="counter-card">
+      <div class="counter-claim">"VASP was just one of many options. It was the last resort temporary one."</div>
+      <div class="counter-response">That's the point. The VA's loss mitigation "waterfall" — the sequence of options for veterans who fall behind — has a massive gap in it. The remaining options (repayment plans, loan modifications) all require veterans to accept today's interest rates, often 3x–4x their original. That's not affordable. The partial claim — what VASP provided and H.R. 1815 makes permanent — is the tool that lets veterans resume at their original rate. FHA has this. Fannie Mae has this. Freddie Mac has this. The VA is the only federal mortgage system that doesn't. When people say "VASP was just the last resort" — yes, and it was the only one that actually worked for families who couldn't absorb a tripled payment. Removing the only affordable option and calling it "just one of many" doesn't make the remaining options affordable.</div>
+    </div>
+    <div class="counter-card">
+      <div class="counter-claim">"This is just rage bait / political propaganda."</div>
+      <div class="counter-response">Chris Arnold and Quil Lawrence have been investigating the VA mortgage crisis for years — they're two of the most experienced reporters covering veterans and housing in the country. This isn't a hot take. NCLC testified before Congress. The Urban Institute published analysis. The ABA Banking Journal reported on it. The Mortgage Bankers Association's own chair-elect testified. These are nonpartisan and industry sources. The 10,000+ number comes from ICE Mortgage Technology. The 90,000 delinquent figure is from congressional testimony. This is documented.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 5: WHO SAYS SO — ORG STATEMENTS -->
+<div class="section" id="who-says">
+  <div class="section-label">Section 5</div>
+  <h2>Who Says So — Nonpartisan and Industry Sources</h2>
+
+  <p class="muted">This isn't one political party's opinion. These are the organizations that track mortgage data, represent the lending industry, and advocate for consumer rights — and they all agree there's a crisis.</p>
+
+  <div class="org-row">
+    <div class="org-card">
+      <div class="org-type">Consumer Advocacy — Congressional Testimony</div>
+      <div class="org-name">NCLC — Alys Cohen</div>
+      <div class="org-quote">"Veteran borrowers facing financial hardship should have at least the same access to workout options…as borrowers with loans backed by Fannie Mae, Freddie Mac, and FHA."</div>
+      <div class="org-source">HVAC testimony, Mar 26, 2026 | <a href="https://www.nclc.org/house-veterans-affairs-subcommittee-to-discuss-lowering-housing-costs-for-veteran-families/" target="_blank">nclc.org</a></div>
+    </div>
+    <div class="org-card">
+      <div class="org-type">Mortgage Industry — Congressional Testimony</div>
+      <div class="org-name">MBA — Owen Lee, Chair-Elect</div>
+      <div class="org-quote">VA should "prioritize options that avoid increasing monthly payments." Confirmed partial claim ETA June 2026.</div>
+      <div class="org-source">HVAC testimony, Mar 26, 2026 | <a href="https://newslink.mba.org/mba-newslinks/2026/april//advocacy-update" target="_blank">MBA Newslink</a></div>
+    </div>
+  </div>
+
+  <div class="org-row">
+    <div class="org-card">
+      <div class="org-type">Consumer Advocacy Coalition</div>
+      <div class="org-name">Center for Responsible Lending — Mike Calhoun</div>
+      <div class="org-quote">"It's a bedrock principle of federal housing policy that borrowers with a financial hardship should be able to bring their loans current and avoid foreclosure."</div>
+      <div class="org-source">May 1, 2025 — day VASP ended | <a href="https://www.responsiblelending.org/media/abrupt-end-vasp-program-leaves-veterans-families-risk-home-loss" target="_blank">responsiblelending.org</a></div>
+    </div>
+    <div class="org-card">
+      <div class="org-type">Nonpartisan Housing Policy Research</div>
+      <div class="org-name">Urban Institute</div>
+      <div class="org-quote">VA borrowers lack deferral/affordable modification options available to FHA and GSE borrowers. Ending VASP "could put military borrowers at risk of foreclosure."</div>
+      <div class="org-source"><a href="https://www.urban.org/urban-wire/overcoming-obstacles-veterans-administrations-loss-mitigation-options" target="_blank">Overcoming Obstacles</a> | <a href="https://www.urban.org/urban-wire/end-veterans-affairs-program-could-put-military-borrowers-risk-foreclosure" target="_blank">End of VASP</a> | <a href="https://www.urban.org/urban-wire/new-va-home-loan-program-reform-act-step-toward-helping-veterans-avoid-foreclosure" target="_blank">H.R. 1815</a></div>
+    </div>
+  </div>
+
+  <div class="org-row">
+    <div class="org-card">
+      <div class="org-type">Banking Industry</div>
+      <div class="org-name">ABA Banking Journal</div>
+      <div class="org-quote">Confirmed 10,000+ veterans lost homes. Reported June 2026 implementation deadline.</div>
+      <div class="org-source">Apr 2, 2026 | <a href="https://bankingjournal.aba.com/2026/04/report-more-than-10000-veterans-have-lost-homes-since-va-changes/" target="_blank">ABA Banking Journal</a></div>
+    </div>
+    <div class="org-card">
+      <div class="org-type">Bipartisan Congressional Statement</div>
+      <div class="org-name">Senate + House VA Committee Leaders</div>
+      <div class="org-quote">"No veteran should fall through the cracks or risk losing their home while a last-resort program is being implemented."</div>
+      <div class="org-source">Moran (R-KS), Blumenthal (D-CT), Bost (R-IL), Takano (D-CA) | <a href="https://www.veterans.senate.gov/2025/7/senate-house-va-committee-leaders-statement-on-passage-of-legislation-to-improve-va-home-loan-program" target="_blank">veterans.senate.gov</a></div>
+    </div>
+  </div>
+
+  <div class="org-row">
+    <div class="org-card full-width">
+      <div class="org-type">HVAC Republican Leadership — H.R. 1815 Co-Sponsors</div>
+      <div class="org-name">Chairman Bost (R-IL) + Subcommittee Chairman Van Orden (R-WI)</div>
+      <div class="org-quote">Bost: "Our bill is a fiscally responsible solution to ensure that veterans in financial hardship have access to the tools they need to stay in their homes." Van Orden: "This program…keeps vets and their families in their homes." Both co-sponsored H.R. 1815 and led the March 26, 2026 HVAC hearing on VA implementation. Whether they will demand a foreclosure pause until the program is live is the key outstanding question.</div>
+      <div class="org-source"><a href="https://themortgagepoint.com/2025/05/20/house-passes-bill-to-assist-vets-at-risk-of-foreclosure/" target="_blank">MortgagePoint</a> | <a href="https://veterans.house.gov/news/documentsingle.aspx?DocumentID=7885" target="_blank">HVAC press release</a></div>
+    </div>
+  </div>
+
+  <div class="org-row">
+    <div class="org-card full-width">
+      <div class="org-type">Investigative Journalism</div>
+      <div class="org-name">Chris Arnold + Quil Lawrence (NPR)</div>
+      <div class="org-quote">Arnold and Lawrence have been investigating the VA mortgage crisis for years. Their April 2026 investigation confirmed 10,000+ homes lost and 90,000+ at risk (ICE Mortgage Technology data). Syndicated to 40+ NPR affiliates, est. 25M+ reach.</div>
+      <div class="org-source">Apr 2, 2026 | <a href="https://www.npr.org/2025/04/02/nx-s1-5345519/veterans-mortgage-foreclosure-va-loan" target="_blank">npr.org</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6: VIDEO SCRIPTS -->
+<div class="section" id="video">
+  <div class="section-label">Section 6</div>
+  <h2>Video + Post Scripts</h2>
+
+  <p class="muted">Use your own words — just get these facts right. Both scripts include bipartisan framing so you're not easily dismissed.</p>
+
+  <div class="script-block">
+    <div class="copy-label">60-Second Video Script</div>
+    <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
+    <p>Quick thing you need to know. <span class="emphasis">More than 10,000 veteran families have lost their homes</span> in the past year. Here's what happened:</p>
+    <p>During COVID, veterans were told to use forbearance — pause their mortgage payments. When forbearance ended, the VA had a partial claim program that let them catch up at their original rate. Then the VA cancelled it without notice. If you have an FHA loan, Fannie Mae, Freddie Mac — <span class="emphasis">they all kept their programs. Only the VA pulled the rug.</span></p>
+    <p>So the VA built a replacement called VASP. <span class="emphasis">It worked. 17,000 families enrolled.</span> Then the VA killed that too. May 2025. No replacement ready. <span class="emphasis">That's the second time</span> veteran families had a rescue program cancelled out from under them without notice.</p>
+    <p>Congress saw the pattern — two administrations had now done this to veterans — so they passed a permanent fix, H.R. 1815, with <span class="emphasis">unanimous bipartisan support</span>. Every Republican, every Democrat. Signed into law July 2025. Written as a law so no administration can cancel it again. That was almost a year ago. <span class="emphasis">The VA still hasn't implemented it.</span> New ETA is June 2026.</p>
+    <p>So now, instead of cancelling a program, the VA is just stalling — not implementing the law, not stopping the foreclosures they have the legal authority to stop. 90,000 more veteran families are in foreclosure right now. 160,000+ total impacted.</p>
+    <p>This isn't left vs. right. Both administrations contributed to this. Congress already fixed the law. <span class="emphasis">The VA is the bottleneck.</span></p>
+    <p><span class="emphasis">Call (202) 224-3121 and tell your representative to demand the VA pause all veteran foreclosures and evictions until the program is live.</span></p>
+  </div>
+
+  <div class="script-block">
+    <div class="copy-label">30-Second Short Version</div>
+    <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
+    <p>The VA has cancelled the mortgage safety net for veteran families twice — first the COVID partial claim program, then the replacement (VASP). Every other federal mortgage system kept theirs. FHA, Fannie Mae, Freddie Mac — they all still have partial claims. Only the VA has nothing. Congress passed a permanent fix with <span class="emphasis">every Republican and every Democrat voting yes</span>. That was almost a year ago. The VA still hasn't implemented it. 10,000+ families already lost their homes. 90,000 more are next. Call (202) 224-3121. Tell your rep: stop the foreclosures now.</p>
+  </div>
+</div>
+
+<!-- SECTION 7: CALL YOUR REP -->
+<div class="section" id="call">
+  <div class="section-label">Section 7</div>
+  <h2>Call Your Representative</h2>
+
+  <div class="call-box">
+    <div class="phone-label">U.S. Capitol Switchboard — ask for your rep by name or ZIP code</div>
+    <div class="phone-number">(202) 224-3121</div>
+    <div class="phone-label">Takes 2 minutes. You'll get a staffer. Read the script below.</div>
+  </div>
+
+  <div class="copy-block">
+    <div class="copy-label">Phone script</div>
+    <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
+    <p style="margin-bottom:.75rem">"Hi, I'm [YOUR NAME] from [CITY, STATE]. I'm calling to ask [REP'S NAME] to demand the VA immediately pause all veteran foreclosures and evictions until the H.R. 1815 partial claim program is fully operational.</p>
+    <p style="margin-bottom:.75rem">More than 10,000 veteran families have already lost their homes since the VA ended its mortgage rescue program last May. Another 90,000 are currently in foreclosure. Congress passed a bipartisan replacement with unanimous support in July 2025, but the VA still hasn't implemented it almost a year later.</p>
+    <p style="margin-bottom:.75rem">The VA has existing legal authority under 38 U.S.C. Sections 3732 and 3733 to pause evictions right now. The Senate and House Veterans' Affairs Committee leaders said — and I'm quoting — 'No veteran should fall through the cracks or risk losing their home while a last-resort program is being implemented.'</p>
+    <p>I'd like this logged as a constituent request. Thank you."</p>
+  </div>
+
+  <p class="muted">Find your rep: <a href="https://www.house.gov/representatives/find-your-representative" target="_blank">house.gov/representatives/find-your-representative</a></p>
+</div>
+
+<!-- SECTION 8: SOCIAL CAPTIONS -->
+<div class="section" id="captions">
+  <div class="section-label">Section 8</div>
+  <h2>Copy-Paste Social Media Captions</h2>
+
+  <div class="copy-block">
+    <div class="copy-label">Facebook / Instagram / X</div>
+    <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
+    <p style="margin-bottom:.5rem">10,000+ veteran families have lost their homes in the past year. 90,000 more are in foreclosure right now.</p>
+    <p style="margin-bottom:.5rem">The VA killed their mortgage rescue program with no replacement ready. Congress passed a bipartisan fix — EVERY Republican and EVERY Democrat voted yes — but the VA still hasn't implemented it almost a year later.</p>
+    <p style="margin-bottom:.5rem">This isn't left vs. right. Both administrations contributed. Congress did its job. The VA is the bottleneck.</p>
+    <p style="margin-bottom:.5rem">These families aren't asking for handouts. They're trying to pay their mortgages. They weren't allowed to.</p>
+    <p style="margin-bottom:.5rem">Call (202) 224-3121. Tell your rep: pause ALL veteran foreclosures and evictions until the replacement program is live.</p>
+    <p>#VeteranForeclosureCrisis #VAMortgage #ProtectVeterans #VeteranHousing #SupportOurVeterans</p>
+  </div>
+
+  <div class="copy-block">
+    <div class="copy-label">TikTok caption</div>
+    <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
+    <p style="margin-bottom:.5rem">10,000+ veteran families lost their homes. Congress passed a bipartisan fix — every R and D voted yes. The VA won't implement it. 90,000 more families are next. Call your rep: (202) 224-3121.</p>
+    <p>#VeteranForeclosureCrisis #VAMortgage #ProtectVeterans #Veterans #MilitaryFamilies</p>
+  </div>
+</div>
+
+<!-- SECTION 9: LINKS -->
+<div class="section" id="links">
+  <div class="section-label">Section 9</div>
+  <h2>Links to Share</h2>
+
+  <div class="link-row">
+    <a class="link-item" href="https://www.npr.org/2025/04/02/nx-s1-5345519/veterans-mortgage-foreclosure-va-loan" target="_blank">
+      <div><div class="link-label">Chris Arnold + Quil Lawrence / NPR Investigation</div><div class="link-title">Trump's VA killed a home loan program. Vets are now losing their homes.</div></div>
+    </a>
+    <a class="link-item" href="https://www.npr.org/2023/11/10/1212408194/military-veteran-mortgage-foreclosure-covid-forbearance" target="_blank">
+      <div><div class="link-label">Tell Your Story to Chris + Quil</div><div class="link-title">If you're a veteran family facing foreclosure, they want to hear from you.</div></div>
+    </a>
+    <a class="link-item" href="https://www.gofundme.com/f/ledfordfamily-help-a-veteran-family-keep-their-home" target="_blank">
+      <div><div class="link-label">GoFundMe</div><div class="link-title">Help a Veteran Family Keep Their Home — Ledford Family</div></div>
+    </a>
+    <a class="link-item" href="https://linktr.ee/leann.salmonberry" target="_blank">
+      <div><div class="link-label">Linktree</div><div class="link-title">All links in one place — NPR, GoFundMe, find your rep, support group</div></div>
+    </a>
+    <a class="link-item" href="https://www.house.gov/representatives/find-your-representative" target="_blank">
+      <div><div class="link-label">Find Your Rep</div><div class="link-title">Look up your representative by ZIP code</div></div>
+    </a>
+    <a class="link-item" href="https://www.facebook.com/share/g/1Az1RArMNP/" target="_blank">
+      <div><div class="link-label">Facebook Support Group</div><div class="link-title">VASP Program Family Support and Information — join other families</div></div>
+    </a>
+  </div>
+</div>
+
+<!-- SECTION 10: COMMUNITY -->
+<div class="section" id="community">
+  <div class="section-label">Section 10</div>
+  <h2>If You're a Veteran Family in This Situation</h2>
+
+  <p>You are not alone. Here's what to do right now:</p>
+
+  <div class="copy-block">
+    <div class="copy-label">Connect + Get Help</div>
+    <ul>
+      <li><strong>Join the support group:</strong> <a href="https://www.facebook.com/share/g/1Az1RArMNP/" target="_blank">VASP Program Family Support and Information</a> on Facebook — co-managed by affected families sharing resources, support, and information</li>
+      <li><strong>Tell your story to Chris Arnold and Quil Lawrence:</strong> <a href="https://www.npr.org/2023/11/10/1212408194/military-veteran-mortgage-foreclosure-covid-forbearance" target="_blank">NPR's veteran mortgage contact page</a> — they've been investigating the VA mortgage crisis for years and are actively reporting</li>
+      <li><strong>Call SSVF</strong> (Supportive Services for Veteran Families): <strong>1-877-4AID-VET</strong> — they help with relocation, moving expenses, housing resources. You do NOT have to sign away legal rights to get help</li>
+      <li><strong>Do not sign Cash for Keys</strong> without understanding what you're waiving — it typically requires you to permanently waive all legal claims</li>
+    </ul>
+  </div>
+
+  <div class="copy-block">
+    <div class="copy-label">Eviction Help</div>
+    <ul>
+      <li><strong>National:</strong> Call <strong>211</strong> — connects to local legal aid, housing counseling, and emergency assistance in every state</li>
+      <li><strong>HUD Housing Counseling:</strong> <strong>1-800-569-4287</strong> — free foreclosure prevention counseling, required for some loss mitigation options</li>
+      <li><strong>Veterans Consortium Pro Bono:</strong> <a href="https://www.vetsprobono.org" target="_blank">vetsprobono.org</a> — free legal help for veterans, including mortgage/foreclosure cases</li>
+      <li><strong>WA State CLEAR Hotline:</strong> <strong>1-888-201-1014</strong> — statewide legal aid intake line. Call when/if an unlawful detainer (UD) summons is filed</li>
+    </ul>
+  </div>
+
+  <div class="copy-block">
+    <div class="copy-label">Document Everything — Here's What and Why</div>
+    <ul>
+      <li><strong>What to save:</strong> Every letter, email, voicemail, phone call record, text message, and VA portal screenshot. Save servicer correspondence, modification offers, denial letters, and any document with a date on it. Note who you spoke with, when, and what they said</li>
+      <li><strong>Where to file reports</strong> (this builds the legal paper trail — it may not fix your situation immediately, but it creates the documented record needed for any future legal action, class action, or congressional investigation):</li>
+      <li>— <strong>CFPB complaint:</strong> <a href="https://www.consumerfinance.gov/complaint/" target="_blank">consumerfinance.gov/complaint</a> — file against your servicer for any RESPA violation, failure to respond, or loss mitigation failure</li>
+      <li>— <strong>VA OIG hotline:</strong> <a href="https://www.va.gov/oig/hotline/" target="_blank">va.gov/oig/hotline</a> — report VA failures, unauthorized foreclosures, or servicer misconduct on VA-guaranteed loans</li>
+      <li>— <strong>State Attorney General:</strong> search "[your state] attorney general consumer complaint" — file for state consumer protection violations</li>
+      <li>— <strong>Your Congressional representatives:</strong> Call (202) 224-3121 and file a constituent casework request. This gets logged and creates political pressure</li>
+      <li><strong>Why this matters even if it doesn't stop your foreclosure:</strong> Every complaint filed is evidence. When attorneys bring class action or injunctive relief, they need documented patterns across families. Your filing makes the case stronger for everyone. It's not wasted effort — it's building the record</li>
+    </ul>
+  </div>
+</div>
+
+</div><!-- end main -->
+
+<div class="footer">
+  <p>Compiled by Leann Ledford — spouse and caregiver to a disabled Marine veteran (two deployments to Afghanistan), and a family directly impacted by this crisis. 2022 Elizabeth Dole Foundation Caregiver Fellow, MSW Graduate Student, WA Certified Victim Advocate.</p>
+  <p style="margin-top:.25rem">Case documented with eight identified regulatory violations, active congressional oversight (House + Senate Veterans' Affairs Committees), VA OIG investigation (Ref #2026-16691), and national media coverage (Chris Arnold + Quil Lawrence/NPR, Common Dreams, GV Wire, Raw Story, IBTimes, Military Times, ABA Banking Journal).</p>
+  <p style="margin-top:.5rem">Share freely. Updated April 5, 2026. All statistics sourced from ICE Mortgage Technology, NCLC congressional testimony, and Chris Arnold + Quil Lawrence's investigation.</p>
+</div>
+
+<script>
+function copyBlock(btn){const b=btn.parentElement,t=[];b.querySelectorAll('p, li').forEach(e=>t.push(e.textContent.trim()));navigator.clipboard.writeText(t.join('\n\n')).then(()=>{btn.textContent='Copied!';btn.classList.add('copied');setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('copied')},2000)})}
+</script>
+</body>
+</html>
