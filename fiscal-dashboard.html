@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Real Cost of VA Foreclosure — Fiscal Analysis</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@400;600;700&family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* ChatGPT-recommended palette */
+  --bg: #F5F2EB;           /* Warm Paper */
+  --white: #FFFFFF;
+  --navy: #24324A;          /* Ink Navy */
+  --slate: #50627D;         /* Slate */
+  --charcoal: #1F232B;      /* Charcoal */
+  --plum: #75658A;          /* Dusty Plum */
+  --rust: #B65C44;          /* Rust */
+  --ochre: #A98547;         /* Ochre */
+  --mist: #D8DEE8;          /* Mist */
+
+  /* Derived */
+  --text: var(--charcoal);
+  --text-mid: #4A4F5C;
+  --text-muted: #7A7E88;
+  --border: #CCC7BB;
+  --card-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  --rust-bg: #F8EDEA;
+  --ochre-bg: #F9F3E8;
+  --plum-bg: #EFEDF2;
+  --mist-bg: #EDF0F5;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Source Sans 3', sans-serif; line-height: 1.6; }
+
+/* HEADER */
+.header { background: var(--navy); color: white; padding: 2.5rem 1.5rem 2rem; text-align: center; }
+.header-kicker { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ochre); margin-bottom: 0.75rem; }
+.header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 700; line-height: 1.25; max-width: 750px; margin: 0 auto 0.75rem; }
+.header-sub { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.7); max-width: 620px; margin: 0 auto; }
+
+.container { max-width: 960px; margin: 0 auto; padding: 0 1.25rem; }
+
+.section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ochre); border-left: 3px solid var(--ochre); padding-left: 0.75rem; margin-bottom: 0.75rem; }
+
+/* STAT CARDS */
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 2rem 0; }
+@media (max-width: 700px) { .stats-row { grid-template-columns: 1fr 1fr; } }
+.stat-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1rem; text-align: center; box-shadow: var(--card-shadow); }
+.stat-num { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 900; line-height: 1; margin-bottom: 0.4rem; color: var(--navy); }
+.stat-card.highlight .stat-num { color: var(--ochre); }
+.stat-desc { font-size: 0.78rem; color: var(--text-mid); line-height: 1.3; }
+.stat-src { font-family: 'DM Sans', sans-serif; font-size: 0.6rem; color: var(--text-muted); margin-top: 0.4rem; font-style: italic; }
+
+/* COMPARISON */
+.compare-section { margin: 2.5rem 0; }
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 700px) { .compare-grid { grid-template-columns: 1fr; } }
+
+.path-card { background: var(--white); border-radius: 10px; box-shadow: var(--card-shadow); overflow: hidden; }
+.path-header { padding: 1rem 1.25rem 0.75rem; color: white; }
+.path-header.path-a { background: var(--navy); }
+.path-header.path-b { background: var(--ochre); }
+.path-header-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.8; }
+.path-header h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; margin-top: 0.2rem; }
+
+.path-body { padding: 1rem 1.25rem 1.25rem; }
+.line-item { display: flex; justify-content: space-between; align-items: baseline; padding: 0.45rem 0; border-bottom: 1px solid #E8E4DB; font-size: 0.82rem; }
+.line-item:last-of-type { border-bottom: none; }
+.line-label { color: var(--text-mid); flex: 1; padding-right: 0.5rem; }
+.line-val { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.9rem; white-space: nowrap; color: var(--navy); }
+.line-val.solution { color: var(--ochre); }
+
+.path-total { margin-top: 0.75rem; padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: baseline; border-top: 2px solid var(--navy); }
+.path-total.solution-border { border-top-color: var(--ochre); }
+.total-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mid); }
+.total-num { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: var(--navy); }
+.total-num.alt { color: var(--ochre); }
+
+.path-note { margin-top: 0.75rem; font-size: 0.7rem; color: var(--text-muted); line-height: 1.5; font-style: italic; }
+
+/* SCALE */
+.scale-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; margin: 2.5rem 0; text-align: center; box-shadow: var(--card-shadow); }
+.scale-row { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin: 1.25rem 0; flex-wrap: wrap; }
+.scale-box { padding: 1.25rem 1.5rem; border-radius: 8px; min-width: 200px; }
+.scale-box.cost { background: var(--mist-bg); border: 1px solid var(--mist); }
+.scale-box.budget { background: var(--ochre-bg); border: 1px solid #E0CFA8; }
+.scale-box .stat-num { font-size: 1.6rem; }
+.scale-box.cost .stat-num { color: var(--navy); }
+.scale-box.budget .stat-num { color: var(--ochre); }
+.scale-box .stat-desc { margin-top: 0.3rem; font-size: 0.78rem; color: var(--text-mid); }
+.scale-equals { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--text-muted); }
+.scale-punchline { font-size: 1rem; color: var(--text); max-width: 640px; margin: 1rem auto 0; line-height: 1.7; }
+.scale-punchline strong { color: var(--navy); }
+
+/* CALLOUT */
+.callout { background: var(--white); border-left: 4px solid var(--ochre); border-radius: 0 10px 10px 0; padding: 1.5rem 1.75rem; margin: 2.5rem 0; box-shadow: var(--card-shadow); }
+.callout h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); margin-bottom: 0.75rem; }
+.callout p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 0.6rem; }
+.callout p:last-child { margin-bottom: 0; }
+.callout strong { color: var(--text); }
+
+/* SAFETY NET COLLAPSE */
+.collapse-card { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--rust); border-radius: 10px; padding: 1.75rem; margin: 2.5rem 0; box-shadow: var(--card-shadow); }
+.collapse-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--navy); margin-bottom: 1rem; }
+.collapse-item { display: flex; gap: 0.75rem; margin-bottom: 0.9rem; align-items: baseline; }
+.collapse-status { font-family: 'Barlow Condensed', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.5rem; border-radius: 3px; white-space: nowrap; min-width: 90px; text-align: center; }
+.status-critical { background: var(--rust-bg); color: var(--rust); }
+.status-gap { background: var(--ochre-bg); color: var(--ochre); }
+.status-uncertain { background: var(--plum-bg); color: var(--plum); }
+.collapse-text { font-size: 0.85rem; color: var(--text-mid); line-height: 1.5; }
+.collapse-text strong { color: var(--text); }
+.collapse-bottom { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.9rem; color: var(--text); line-height: 1.6; font-style: italic; }
+
+/* REVOLVING DOOR */
+.revolving-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.75rem; margin: 2.5rem 0; box-shadow: var(--card-shadow); }
+.bar-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.9rem; }
+.bar-row:last-child { margin-bottom: 0; }
+.bar-date { font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; font-weight: 600; color: var(--text-mid); min-width: 60px; text-align: right; }
+.bar-track { flex: 1; height: 28px; background: var(--mist); border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 0.6rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; font-weight: 700; color: var(--white); background: var(--slate); }
+.bar-fill.pending { background: var(--plum); }
+.bar-event { font-size: 0.68rem; color: var(--text-muted); min-width: 130px; }
+
+/* THE ASK */
+.ask-card { background: var(--navy); color: white; border-radius: 10px; padding: 2rem; margin: 2.5rem 0; }
+.ask-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--ochre); margin-bottom: 1.25rem; text-align: center; }
+.ask-item { display: flex; gap: 0.75rem; margin-bottom: 1rem; align-items: baseline; }
+.ask-num { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--ochre); min-width: 1.75rem; }
+.ask-text { font-size: 0.88rem; color: rgba(255,255,255,0.85); line-height: 1.6; }
+.ask-text strong { color: var(--white); }
+
+/* FOOTER */
+.footer { border-top: 1px solid var(--border); margin-top: 2.5rem; padding: 1.5rem 0 2rem; text-align: center; }
+.footer-sources { font-family: 'DM Sans', sans-serif; font-size: 0.6rem; color: var(--text-muted); line-height: 2; max-width: 700px; margin: 0 auto 1rem; }
+.footer-id { font-size: 0.78rem; color: var(--text-mid); line-height: 1.7; }
+.footer-id a { color: var(--ochre); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-kicker">Public Advocacy Brief · Updated March 29, 2026</div>
+  <h1>VA Is Spending More to Create Veteran Homelessness Than It Would Cost to Prevent It</h1>
+  <p class="header-sub">Verified federal data. The program Congress passed to fix this — H.R. 1815 — still isn't operational eight months later. The safety net that catches families after foreclosure is being dismantled at the same time.</p>
+</div>
+
+<div class="container">
+
+  <div class="section-label" style="margin-top:2rem">The Crisis Right Now</div>
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-num">90,000</div><div class="stat-desc">Veterans 90+ days delinquent</div><div class="stat-src">NCLC/Cohen, HVAC 3/26/26</div></div>
+    <div class="stat-card"><div class="stat-num">31,500</div><div class="stat-desc">In active foreclosure (35%)</div><div class="stat-src">NCLC/Cohen, HVAC 3/26/26</div></div>
+    <div class="stat-card"><div class="stat-num">$72K</div><div class="stat-desc">Avg cost per VA foreclosure</div><div class="stat-src">Cohen testimony 3/26/26</div></div>
+    <div class="stat-card highlight"><div class="stat-num">$0</div><div class="stat-desc">Immediate cost of a partial claim</div><div class="stat-src">Second lien — repaid at sale/refi</div></div>
+  </div>
+
+  <div class="compare-section">
+    <div class="section-label">Two Paths, One Family — Total Government Cost Over 3 Years</div>
+    <div class="compare-grid">
+      <div class="path-card">
+        <div class="path-header path-a"><div class="path-header-label">Path A — What Happens Now</div><h3>Foreclosure</h3></div>
+        <div class="path-body">
+          <div class="line-item"><span class="line-label">Guaranty claim + REO disposition</span><span class="line-val">$72,000</span></div>
+          <div class="line-item"><span class="line-label">VRM property management (~8 mo)</span><span class="line-val">$8,000</span></div>
+          <div class="line-item"><span class="line-label">REO resale loss (avg discount)</span><span class="line-val">$15,000</span></div>
+          <div class="line-item"><span class="line-label">Lost loan interest income</span><span class="line-val">$12,600</span></div>
+          <div class="line-item"><span class="line-label">SSVF emergency housing (3 yr)</span><span class="line-val">$23,400</span></div>
+          <div class="line-item"><span class="line-label">Increased VA healthcare</span><span class="line-val">$31,400</span></div>
+          <div class="line-item"><span class="line-label">Crisis / psych / ER services</span><span class="line-val">$18,500</span></div>
+          <div class="line-item"><span class="line-label">Unemployment + VA employment svcs</span><span class="line-val">$14,400</span></div>
+          <div class="line-item"><span class="line-label">Credit destruction (7+ yr recovery)</span><span class="line-val" style="font-size:0.75rem">Incalculable</span></div>
+          <div class="path-total"><span class="total-label">3-Year Total Government Cost</span><span class="total-num">$195,300+</span></div>
+          <p class="path-note">Sources: Cohen/NCLC ($72K); Auction.com (75% go to REO); VA FY25 budget; NIH/PMC homeless cost studies ($35K–$50K/yr); CRS SSVF data; ER utilization research.</p>
+        </div>
+      </div>
+      <div class="path-card">
+        <div class="path-header path-b"><div class="path-header-label">Path B — What H.R. 1815 Does</div><h3>Partial Claim</h3></div>
+        <div class="path-body">
+          <div class="line-item"><span class="line-label">Partial claim (second lien)</span><span class="line-val solution">$0 *</span></div>
+          <div class="line-item"><span class="line-label">Property management</span><span class="line-val solution">$0</span></div>
+          <div class="line-item"><span class="line-label">REO resale loss</span><span class="line-val solution">$0</span></div>
+          <div class="line-item"><span class="line-label">Loan interest income</span><span class="line-val solution">+$12,600</span></div>
+          <div class="line-item"><span class="line-label">Housing assistance needed</span><span class="line-val solution">$0</span></div>
+          <div class="line-item"><span class="line-label">Healthcare utilization spike</span><span class="line-val solution">$0</span></div>
+          <div class="line-item"><span class="line-label">Crisis intervention needed</span><span class="line-val solution">$0</span></div>
+          <div class="line-item"><span class="line-label">Unemployment services</span><span class="line-val solution">$0</span></div>
+          <div class="line-item"><span class="line-label">Credit impact</span><span class="line-val solution">None</span></div>
+          <div class="path-total solution-border"><span class="total-label">3-Year Total Government Cost</span><span class="total-num alt">$0</span></div>
+          <p class="path-note">* Arrears become a zero-interest second lien repaid when the veteran sells or refinances. Funded by the Loan Guaranty Fund (veteran funding fees — not taxpayer appropriations). Loan stays performing. Family stays housed. Veteran keeps paying their mortgage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scale-card">
+    <div class="section-label" style="border:none; padding:0; text-align:center">Scale This to the Current Crisis</div>
+    <div class="scale-row">
+      <div class="scale-box cost"><div class="stat-num">$2.3B</div><div class="stat-desc">Projected cost of foreclosing on 31,500 veteran families</div></div>
+      <div class="scale-equals">=</div>
+      <div class="scale-box budget"><div class="stat-num">72%</div><div class="stat-desc">of VA's $3.2B annual homeless prevention budget</div></div>
+    </div>
+    <p class="scale-punchline">VA is about to spend the equivalent of <strong>nearly three-quarters of its entire homelessness budget creating veteran homelessness</strong> through foreclosures — then spend the actual budget trying to deal with the consequences.</p>
+  </div>
+
+  <div class="callout">
+    <h3>"Why Can't Veterans Just Start Paying Again?"</h3>
+    <p>They want to. <strong>The system won't let them.</strong></p>
+    <p>When a VA loan is in default, the servicer will not accept regular monthly payments. They demand <strong>full lump-sum reinstatement</strong> — all missed payments, interest, fees, and escrow — upfront, in full, before any conversation. For a family that entered COVID forbearance, that's <strong>$35,000+</strong>.</p>
+    <p>The partial claim takes that $35,000, places it in a second lien, resets the loan to current, and <strong>lets the family resume their regular monthly payment.</strong></p>
+    <p>We called Freedom Mortgage a month before our forbearance ended to make sure we did everything right before resuming payments. We found out the COVID program had been cancelled — no notice, no plan, no path to restart. <strong>We are not asking for a handout. We are not asking for free mortgage payments. We are asking to be allowed to pay our mortgage.</strong></p>
+  </div>
+
+  <div class="collapse-card">
+    <h3>Every Safety Net Is Down — Simultaneously</h3>
+    <div class="collapse-item"><span class="collapse-status status-critical">Not Running</span><span class="collapse-text"><strong>H.R. 1815 Partial Claim</strong> — Signed into law July 2025. Still not operational. VA target: "June 2026." Van Orden at 3/26 hearing: "too long."</span></div>
+    <div class="collapse-item"><span class="collapse-status status-gap">Transition</span><span class="collapse-text"><strong>BRAVE (replacing HUD-VASH)</strong> — Senate didn't fund. House funded $970M of $1.1B requested. Not operational. No transition timeline.</span></div>
+    <div class="collapse-item"><span class="collapse-status status-critical">Cliff Now</span><span class="collapse-text"><strong>Emergency Housing Vouchers</strong> — Funding running out March 2026. 59,000 households losing assistance. Was supposed to last until 2030.</span></div>
+    <div class="collapse-item"><span class="collapse-status status-critical">Eliminated</span><span class="collapse-text"><strong>USICH</strong> — Federal coordinating body for homelessness response. Eliminated in FY2026 budget. No replacement.</span></div>
+    <div class="collapse-item"><span class="collapse-status status-uncertain">Uncertain</span><span class="collapse-text"><strong>SSVF</strong> — Primary program for veteran families at risk. Future uncertain under BRAVE restructuring.</span></div>
+    <div class="collapse-bottom">Each change has a rationale. But when you zoom out: there is no functioning safety net for veteran families in foreclosure right now. Not one. You don't fix bureaucratic dysfunction by creating more bureaucratic dysfunction without a transition plan. Veterans understand phased operations. This isn't one.</div>
+  </div>
+
+  <div class="revolving-card">
+    <div class="section-label">The Revolving Door — 90,000 Isn't a Static Number</div>
+    <p style="font-size:0.82rem;color:var(--text-mid);margin-bottom:1.25rem;">New families fall in as fast as others are foreclosed out.</p>
+    <div class="bar-row"><span class="bar-date">May '25</span><div class="bar-track"><div class="bar-fill" style="width:90%">~90,000</div></div><span class="bar-event">VASP cancelled</span></div>
+    <div class="bar-row"><span class="bar-date">Jul '25</span><div class="bar-track"><div class="bar-fill" style="width:79%">~79,000</div></div><span class="bar-event">H.R. 1815 signed</span></div>
+    <div class="bar-row"><span class="bar-date">Dec '25</span><div class="bar-track"><div class="bar-fill" style="width:90%">~90,000</div></div><span class="bar-event">Still no partial claim</span></div>
+    <div class="bar-row"><span class="bar-date">Mar '26</span><div class="bar-track"><div class="bar-fill" style="width:90%">~90,000</div></div><span class="bar-event">8 months post-signing</span></div>
+    <div class="bar-row"><span class="bar-date">Jun '26?</span><div class="bar-track"><div class="bar-fill pending" style="width:90%">~90,000?</div></div><span class="bar-event">VA target — no firm date</span></div>
+  </div>
+
+  <div class="ask-card">
+    <h3>The Ask — Already Law, Not Yet Implemented</h3>
+    <div class="ask-item"><span class="ask-num">1</span><span class="ask-text"><strong>Pause foreclosures while the partial claim launches.</strong> Section 3(h) of H.R. 1815 gives the Secretary authority to issue immediate administrative guidance. That guidance hasn't been issued. This isn't a new moratorium. It's the law you already passed.</span></div>
+    <div class="ask-item"><span class="ask-num">2</span><span class="ask-text"><strong>Audit VALERI on the Ledford loan.</strong> VA says Freedom Mortgage never submitted. Freedom says they offered a modification. Both can't be true. The VALERI logs resolve it.</span></div>
+    <div class="ask-item"><span class="ask-num">3</span><span class="ask-text"><strong>Explore leaseback under 38 U.S.C. § 3732.</strong> VA now owns the property. Selling or leasing it back saves REO costs while keeping a disabled veteran family housed.</span></div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-sources">SOURCES: Cohen/NCLC HVAC testimony 3/26/26 · Auction.com HVAC testimony 3/26/26 · VA Homeless Programs FY25 Budget ($3.2B) · FY26 Budget ($3.46B requested) · NIH/PMC homeless cost studies · CRS Report RL34024 · NPR/ICE delinquency data · NLIHC FY26 analysis · Bipartisan Policy Center FY26 THUD summary · H.R. 1815 (P.L. 119-31) · 38 CFR 36.4319</div>
+    <p class="footer-id">Prepared by <strong>Leann Ledford</strong> · Social Worker, WA State Certified Victim Advocate, MSW Grad Student<br>USMC Disabled Veteran Spouse & Caregiver · 2022 Elizabeth Dole Foundation Fellow<br>VA Loan #0136811965 · VA OIG Ref: 2026-16691 · <a href="mailto:jlledford.family@gmail.com">jlledford.family@gmail.com</a> · 509-876-6299</p>
+  </div>
+
+</div>
+</body>
+</html>
