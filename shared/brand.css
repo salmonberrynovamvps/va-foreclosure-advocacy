@@ -1,0 +1,339 @@
+/* ============================================================
+   VAFC Brand Kit v1.0 — applied to GitHub Pages dashboards
+   Source: Foreclosure Case/BRAND_KIT_v1.md (extracted from
+   Congressional Brief v9, locked 2026-04-26).
+   DO NOT mix with Catppuccin (personal-only). DO NOT add
+   plum/gold/yellow/coral/terracotta/amber/teal/Inter.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Locked five-color palette */
+  --bg:            #FBFAF6;   /* warm off-white, NOT pure white */
+  --charcoal:      #1F232B;   /* body text */
+  --indigo:        #1F2D5C;   /* anchor accent — does ~95% of work */
+  --indigo-deep:   #16223F;   /* H1/H2 + framing-flag solid blocks */
+  --crimson:       #A01828;   /* signal only — DAY counter, harm flags */
+
+  /* Tints */
+  --indigo-tint-4: rgba(31, 45, 92, 0.04);
+  --indigo-tint-5: rgba(31, 45, 92, 0.05);
+  --crimson-tint-6: rgba(160, 24, 40, 0.06);
+
+  --cell-border:   #BFC4CD;   /* 0.4pt cool-grey table borders */
+
+  /* Typefaces */
+  --face-display:  'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --face-editorial: 'Newsreader', 'Source Serif 4', Georgia, serif;
+  --face-body:     'IBM Plex Sans', system-ui, sans-serif;
+  --face-mono:     'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--charcoal);
+  font-family: var(--face-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings: Big Shoulders for display, IBM Plex Sans for sub-heads (H3/H4) */
+h1, h2 {
+  font-family: var(--face-display);
+  font-weight: 900;
+  color: var(--indigo-deep);
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  line-height: 1.05;
+  margin: 1.4em 0 0.6em;
+}
+h1 {
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
+  border-bottom: 2.5px solid var(--indigo);
+  padding-bottom: 0.25em;
+}
+h2 {
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  border-bottom: 1px solid var(--indigo);
+  padding-bottom: 0.2em;
+  letter-spacing: 0.01em;
+}
+h3 {
+  font-family: var(--face-body);
+  font-weight: 700;
+  color: var(--indigo);
+  font-size: 1.15rem;
+  margin: 1.4em 0 0.4em;
+}
+h4 {
+  font-family: var(--face-body);
+  font-weight: 600;
+  color: var(--charcoal);
+  font-size: 1rem;
+  margin: 1.2em 0 0.3em;
+}
+
+p, li { font-size: 1rem; line-height: 1.6; }
+
+a {
+  color: var(--indigo);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+a:hover { color: var(--indigo-deep); text-decoration-thickness: 2px; }
+
+strong, b { font-weight: 700; color: var(--indigo-deep); }
+em, i { font-family: var(--face-editorial); font-style: italic; }
+
+hr { border: none; border-top: 1px solid var(--indigo); opacity: 0.4; margin: 2em 0; }
+
+/* Editorial pull-quote / subtitle */
+.subtitle {
+  font-family: var(--face-editorial);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--indigo-deep);
+  font-size: 1.15rem;
+  margin: 0.4em 0 1.5em;
+  max-width: 60ch;
+}
+
+.pull-quote, blockquote {
+  font-family: var(--face-editorial);
+  font-weight: 600;
+  color: var(--indigo-deep);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  background: var(--indigo-tint-4);
+  border-left: 3px solid var(--indigo);
+  padding: 1em 1.3em;
+  margin: 1.5em 0;
+}
+.pull-quote strong, blockquote strong { color: var(--crimson); }
+
+/* Strong callout — crimson signal */
+.callout {
+  background: var(--crimson-tint-6);
+  border-left: 3px solid var(--crimson);
+  padding: 1em 1.3em;
+  margin: 1.5em 0;
+  font-size: 0.98rem;
+}
+.callout strong { color: var(--crimson); font-weight: 700; }
+
+/* Framing-flag (loud, reserved for 1-2 per page) */
+.framing-flag {
+  background: var(--indigo-deep);
+  color: var(--bg);
+  font-family: var(--face-display);
+  font-weight: 900;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 0.9em 1.2em;
+  margin: 1.5em 0;
+  line-height: 1.25;
+}
+
+/* Numerals + docket refs */
+.reg-num, .mono, code, kbd, samp {
+  font-family: var(--face-mono);
+  font-weight: 500;
+  font-size: 0.92em;
+  color: var(--indigo);
+}
+
+/* DAY counter — crimson signal, mono */
+.day-counter {
+  font-family: var(--face-mono);
+  font-weight: 700;
+  color: var(--crimson);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Harm-flag inline */
+.harm-flag {
+  color: var(--crimson);
+  font-weight: 700;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.95rem;
+}
+thead th {
+  background: var(--indigo-deep);
+  color: var(--bg);
+  font-family: var(--face-body);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.6em 0.8em;
+  text-align: left;
+  border: 0.4pt solid var(--cell-border);
+}
+tbody td {
+  padding: 0.55em 0.8em;
+  border: 0.4pt solid var(--cell-border);
+  vertical-align: top;
+  line-height: 1.4;
+}
+tbody tr:nth-child(even) td { background: var(--indigo-tint-4); }
+
+/* Card / metric block */
+.kpi-card {
+  background: var(--bg);
+  border: 1px solid var(--cell-border);
+  border-top: 3px solid var(--indigo);
+  padding: 1em 1.1em;
+  margin: 0.5em 0;
+}
+.kpi-card .figure {
+  font-family: var(--face-mono);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--indigo-deep);
+  line-height: 1;
+  display: block;
+}
+.kpi-card .label {
+  font-family: var(--face-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.4em;
+  display: block;
+}
+.kpi-card .source {
+  font-family: var(--face-mono);
+  font-size: 0.75rem;
+  color: var(--indigo);
+  margin-top: 0.3em;
+  display: block;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1em;
+  margin: 1.5em 0;
+}
+
+/* Page wrapper */
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2.5em 1.5em 4em;
+}
+
+/* Header / meta strip */
+.meta-strip {
+  font-family: var(--face-mono);
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--indigo);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6em;
+}
+
+/* Footer */
+.page-footer {
+  margin-top: 4em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--indigo);
+  font-size: 0.88rem;
+  color: var(--charcoal);
+  line-height: 1.5;
+}
+.page-footer .reg-num { display: inline-block; margin-right: 0.6em; }
+
+/* Section break */
+.section {
+  margin: 3em 0;
+}
+.section-label {
+  font-family: var(--face-mono);
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--indigo);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.2em;
+}
+
+/* Timeline list */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 1.5em 0;
+}
+.timeline li {
+  padding: 0.8em 0 0.8em 5.5em;
+  border-bottom: 1px solid var(--indigo-tint-5);
+  position: relative;
+  margin: 0;
+}
+.timeline li .when {
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  font-family: var(--face-mono);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--indigo);
+  letter-spacing: 0.02em;
+}
+
+/* Anchor offsets so #timeline etc lands cleanly */
+:target { scroll-margin-top: 1em; }
+
+/* Buttons / TOC links */
+.toc {
+  background: var(--indigo-tint-5);
+  border-left: 3px solid var(--indigo);
+  padding: 1em 1.3em;
+  margin: 1.5em 0 2em;
+}
+.toc-title {
+  font-family: var(--face-display);
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--indigo-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5em;
+}
+.toc a {
+  display: inline-block;
+  margin: 0.15em 1em 0.15em 0;
+  font-family: var(--face-body);
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .page { padding: 1.5em 1em 3em; }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.3rem; }
+  .kpi-card .figure { font-size: 1.6rem; }
+  .timeline li { padding-left: 0; padding-top: 1.8em; }
+  .timeline li .when { position: static; display: block; margin-bottom: 0.2em; }
+}
