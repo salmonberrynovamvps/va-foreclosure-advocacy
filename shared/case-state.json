@@ -1,0 +1,88 @@
+{
+  "as_of_date": "2026-05-15",
+  "as_of_label": "Updated May 15, 2026",
+  "va_silence_anchor": "2026-03-26",
+  "va_silence_days": 50,
+  "va_silence_weeks": 7,
+  "va_silence_week_label": "Week 7 (Day 50)",
+  "case_email": "jlledford.family@gmail.com",
+  "linktree": "https://linktr.ee/leann.salmonberry",
+  "campaign_hub": "https://vaforeclosureaction.org",
+  "filing_refs": {
+    "va_oig": "2026-16691",
+    "cfpb": "260407-31030512",
+    "wa_ag_omvla": "CLOSED 2026-05-08 (paid-attorney referral track)",
+    "wa_ag_cpd": "File #719728 — acknowledged 2026-05-14 (Consumer Protection Division systemic investigation re: Freedom Mortgage + North Star Trustee LLC + VRM)",
+    "va_loan_id": "0136811965"
+  },
+  "fm_penalties_usd_m": 130.3,
+  "servicer": "Freedom Mortgage",
+  "reo_contractor": "VRM Mortgage Services",
+  "va_reo_contract": "VA119A17C0062",
+  "eviction_counsel": "ZBS Law LLP — Tom B. Pierce (WSBA #26730), Jennifer Lavoie",
+  "three_day_notice_served": "2026-04-21",
+  "ud_window_opened": "2026-04-27",
+  "lockout_floor": "2026-06-30",
+  "hr_1815_signed": "2025-07-30",
+  "hr_1815_va_eta": "2026-06",
+  "hr_1815_days_since_signing": 289,
+  "cohort_counts": {
+    "already_lost": 10000,
+    "delinquent": 90000,
+    "impacted": 160000
+  },
+  "powers_v_collins": {
+    "circuit": "9th Cir.",
+    "case_no": "No. 24-6576",
+    "district_ct": "C.D. Cal. 2:22-cv-08357",
+    "affirmed": "2025-12-23",
+    "lead_counsel": "Mark Rosenbaum, Public Counsel",
+    "org_plaintiff": "National Veterans Foundation (NVF)"
+  },
+  "current_press": [
+    { "date": "2026-04-02", "outlet": "NPR (Chris Arnold + Quil Lawrence)", "title": "VA Loan Calamity — veterans lose homes after VA killed forbearance partial-claim program", "url": "https://www.npr.org/2025/04/02/nx-s1-5345519/veterans-mortgage-foreclosure-va-loan" },
+    { "date": "2026-04-06", "outlet": "Rachel Maddow Show (MSNBC)", "title": "~20-min segment on active-duty + veteran foreclosure crisis", "url": "https://www.youtube.com/watch?v=NMSBSksqBbs" },
+    { "date": "2026-04-11", "outlet": "Rolling Stone (Michael Embrich)", "title": "Veterans Are Facing a Housing Crisis. Trump Is Making It Worse.", "url": "https://www.rollingstone.com/politics/political-commentary/veterans-housing-crisis-trump-1235248932/" },
+    { "date": "2026-04-12", "outlet": "MS NOW / MSNBC Weekend Primetime (Max Rose)", "title": "Ledford segment — third national outlet to cover the family case", "url": "" },
+    { "date": "2026-04-22", "outlet": "LA Times (Doug Smith)", "title": "Trump's big promise for veteran housing is AWOL in VA budget proposal", "url": "https://www.latimes.com/california/story/2026-04-22/trumps-big-promise-for-veteran-housing-is-awol-in-va-budget-proposal-mystifying-vets" },
+    { "date": "2026-05-02", "outlet": "Newsweek (Aliss Higham)", "title": "Veterans Lose Homes as VA Relief Ends and Housing Plans Stall", "url": "https://www.newsweek.com/veterans-lose-homes-as-va-relief-ends-and-housing-plans-stall-11891543" }
+  ],
+  "counsel_state": {
+    "track_a_hatcher": { "status": "CLOSED 2026-05-05", "note": "Recommended CFK; declined to take case; no replacement referral" },
+    "track_b_kilburn": { "status": "pending", "note": "RESPA-FC outreach not yet initiated" },
+    "omvla": { "status": "CLOSED 2026-05-08", "note": "WA AG OMVLA unable to refer additional pro bono; referred to Spokane HJP hotline 1-855-657-8387" },
+    "njp": { "status": "unable to take case", "note": "Northwest Justice Project — scope/capacity" },
+    "post_ud_fallback": "Spokane Housing Justice Project hotline 1-855-657-8387 (activates on UD filing)"
+  },
+  "pro_bono_pings": {
+    "public_counsel": "submitted 2026-04-28; no response as of 5/13",
+    "milbank_nvf_taskforce": "submitted 2026-04-28; re-ping ~5/20",
+    "munger_tolles": "submitted; re-ping ~5/18"
+  },
+  "recent_events": [
+    { "date": "2026-05-11", "event": "Dexter (OR-3) thank-you sent for Amendment #60 V1+V2 to H.R. 8469 ahead of 5/12 House Rules markup" },
+    { "date": "2026-05-11", "event": "Substack Post 1 published: 'We were not allowed to pay our mortgage'" },
+    { "date": "2026-05-11", "event": "VA responded to Rep. Harriet Hageman (R, WY-AL) on cohort family Criss/Van Leer constituent inquiry; CJ Young (Military & Veterans Liaison) characterized response as 'not the response we were hoping for'; Hageman DC team continuing engagement" },
+    { "date": "2026-05-12", "event": "House Rules Committee markup on H.R. 8469 → H.Res.1275 reported out; Dexter Amd #60 final list pending verification" },
+    { "date": "2026-05-13", "event": "VA silence Week 7 increments; H.Res.1275 (rule for H.R. 8469) agreed 214-208 on House floor" },
+    { "date": "2026-05-14", "event": "VFW Joe Grassi oversight info-share reply SENT (CC Jerrod + cohort); VRM/ZBS FIRST substantive response SENT with 7 formal option requests under existing VA authority (sale-back, leaseback, compromise sale, VA Refund, rescission, equitable relief under 38 U.S.C. § 503, and review under VA Circular 26-24-12)" },
+    { "date": "2026-05-14", "event": "WA AG Consumer Protection Division acknowledged complaint receipt: File #719728. Subjects: Freedom Mortgage + North Star Trustee LLC + VRM Mortgage Services. Track distinct from OMVLA (CLOSED 5/8)." },
+    { "date": "2026-05-14", "event": "VFW HQ wrote Sec. Collins calling for foreclosure moratorium pending Partial Claim Program implementation (per Joe Grassi 7:15 AM email)" },
+    { "date": "2026-05-15", "event": "Marjorie/Krista (EDF Resource Navigation) handoff refresh SENT; Denise Ferguson (Sequim, WA cohort family) consented Option A for WA AG CPD supplement filing" },
+    { "date": "2026-05-15", "event": "HVAC higher-level review remains active (opened 4/30/26 through EDF/Meredith Beck + HVAC majority staff; cohort included for systemic-pattern record)" }
+  ],
+  "va_response_pattern_corrected": "VA responds through congressional channels (Murray 4/2/26 on OCLA Inquiry IMA00592850 with inadequate substance; Hageman 5/11/26 on Criss/Van Leer cohort family with inadequate substance per CJ Young). VA has NOT engaged directly with the Ledford family since the 4/22/26 missed EDF-arranged direct-contact deadline. All VA-side correspondence on the foreclosure since 4/22 has come through ZBS Law (VRM's REO eviction counsel), not VA itself.",
+  "hageman_track": {
+    "rep": "Rep. Harriet Hageman (R, WY-AL)",
+    "liaison": "CJ Young, Military & Veterans Liaison (repharriethageman@mail15.housecommunications.gov)",
+    "cohort_family": "Cortney Criss + Josh Van Leer (Cheyenne WY, Freedom Mortgage, foreclosed Sept 2025)",
+    "va_response_date": "2026-05-11",
+    "status": "Active — DC team continuing to engage VA congressional liaisons after inadequate VA response"
+  },
+  "non_negotiables": {
+    "case_email_only": "jlledford.family@gmail.com — never use leann.r.ledford@gmail.com in filings/outreach",
+    "three_tier_framing": "All outreach centers all 160,000 families — 10K already lost, 90K delinquent, 160K impacted",
+    "no_dramatic_language": "Banned: 'smoking gun', 'bombshell', 'combat disabled'",
+    "trauma_informed": "'disabled veteran + two deployments to Afghanistan' (NOT 'combat disabled')"
+  }
+}
