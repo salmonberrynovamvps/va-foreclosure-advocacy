@@ -285,7 +285,7 @@ tbody tr:nth-child(even) td { background: var(--indigo-tint-4); }
   margin: 1.5em 0;
 }
 .timeline li {
-  padding: 0.8em 0 0.8em 5.5em;
+  padding: 0.8em 0 0.8em 8em;
   border-bottom: 1px solid var(--indigo-tint-5);
   position: relative;
   margin: 0;
@@ -294,6 +294,7 @@ tbody tr:nth-child(even) td { background: var(--indigo-tint-4); }
   position: absolute;
   left: 0;
   top: 0.8em;
+  width: 7em;
   font-family: var(--face-mono);
   font-weight: 600;
   font-size: 0.85rem;
@@ -335,5 +336,4 @@ tbody tr:nth-child(even) td { background: var(--indigo-tint-4); }
   h2 { font-size: 1.3rem; }
   .kpi-card .figure { font-size: 1.6rem; }
   .timeline li { padding-left: 0; padding-top: 1.8em; }
-  .timeline li .when { position: static; display: block; margin-bottom: 0.2em; }
-}
+  .timeline li .when { position: static; display: block; margin-bottom:
